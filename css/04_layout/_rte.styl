@@ -1,0 +1,176 @@
+.rte,
+.expand__rte
+    // Styling
+    h2,
+    h3,
+    h4
+        color $c-brand
+
+    h2
+        @extends .heading-2
+
+    h3,
+    h4
+        @extend .teasing-2
+
+    h4
+        italic()
+        letter-spacing 0.05rem
+
+    hr
+        height 0.1rem
+        margin 0
+        border 0
+        background $c-border
+
+    a
+        color $c-font
+        border-bottom 1px solid $c-orange
+
+        &:hover
+            color $c-orange
+
+    img
+        display inline-block
+        vertical-align middle
+        max-width 100%
+        height auto
+
+    ul
+        @extend .list
+
+        li
+            @extend .list .list__item
+
+    // Color variations
+    .article__part--orange &
+        h2,
+        h3,
+        h4
+            color $c-orange
+
+        p,
+        li,
+        a
+            color $c-font
+
+        li
+            &:before
+                border-color $c-orange
+
+        a:hover
+            color $c-orange
+
+    .article__part--light-blue &
+        h2,
+        h3,
+        h4
+            color $c-brand
+
+        p,
+        li,
+        a
+            color $c-font
+
+        li
+            &:before
+                border-color $c-brand
+
+        a:hover
+            color $c-orange
+
+    .article__part--blue &
+        h2,
+        h3,
+        h4,
+        p,
+        li,
+        a
+            color $c-white
+
+        li
+            &:before
+                border-color $c-white
+
+        a:hover
+            color $c-orange
+
+
+    // Spacing routines
+    h2
+        & + h3,
+        & + h4,
+        & + p,
+        & + img,
+        & + ul
+            margin-top 4rem
+
+    h3
+        & + h4,
+        & + p,
+        & + img,
+        & + ul
+            margin-top 2rem
+
+    h4
+        & + p,
+        & + img,
+        & + ul
+            margin-top 3.6rem
+
+    p,
+    img,
+    ul
+        & + img,
+        & + p,
+        & + h2,
+        & + h3,
+        & + h4,
+        & + ul
+            margin-top 1.5rem
+
+    ul
+        li + li
+            margin-top 1.5rem
+
+    // Responsive
+    +mq($from: 0px, $until: 'small')
+        // Spacing routines
+        h2
+            & + h3,
+            & + h4,
+            & + p,
+            & + img,
+            & + ul
+                margin-top 2rem
+
+        h3
+            & + h4,
+            & + p,
+            & + img,
+            & + ul
+                margin-top 1rem
+
+        h4
+            & + p,
+            & + img,
+            & + ul
+                margin-top 1.8rem
+
+        p,
+        img,
+        ul
+            & + img,
+            & + p,
+            & + h2,
+            & + h3,
+            & + h4,
+            & + ul
+                margin-top 0.7rem
+
+        ul
+            li + li
+                margin-top 0.7rem
+
+    iframe
+        max-width 100% !important

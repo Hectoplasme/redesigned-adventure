@@ -1,0 +1,31 @@
+.container
+    margin 0 auto
+    position relative
+
+    +from($desktop)
+        max-width $desktop - (2 * $gap)
+        width $desktop - (2 * $gap)
+
+    &.is-fluid
+        margin-left $gap
+        margin-right $gap
+        max-width none
+        width auto
+
+    +until($wide)
+        &.is-wide
+            max-width $wide - (2 * $gap)
+            width auto
+
+    +until($fullhd)
+        &.is-fullhd
+            max-width $fullhd - (2 * $gap)
+            width auto
+
+    +from($wide)
+        max-width $wide - (2 * $gap)
+        width $wide - (2 * $gap)
+
+    +from($fullhd)
+        max-width $fullhd - (2 * $gap)
+        width $fullhd - (2 * $gap)

@@ -1,0 +1,100 @@
+// Colors
+
+$c-black =        hsl(0, 0%, 4%)
+$c-black-bis =    hsl(0, 0%, 7%)
+$c-black-ter =    hsl(0, 0%, 14%)
+
+$c-grey-darker =  hsl(0, 0%, 21%)
+$c-grey-dark =    hsl(0, 0%, 29%)
+$c-grey =         hsl(0, 0%, 48%)
+$c-grey-light =   hsl(0, 0%, 71%)
+$c-grey-lighter = hsl(0, 0%, 86%)
+
+$c-white-ter =    hsl(0, 0%, 96%)
+$c-white-bis =    hsl(0, 0%, 98%)
+$c-white =        hsl(0, 0%, 100%)
+
+$c-orange =       hsl(14,  100%, 53%)
+$c-yellow =       hsl(48,  100%, 67%)
+$c-green =        hsl(141, 71%,  48%)
+$c-turquoise =    hsl(171, 100%, 41%)
+$c-blue =         hsl(217, 71%,  53%)
+$c-purple =       hsl(271, 100%, 71%)
+$c-red =          hsl(348, 100%, 61%)
+
+// Invert colors
+
+$c-orange-invert = findColorInvert($c-orange)
+$c-yellow-invert = findColorInvert($c-yellow)
+$c-green-invert = findColorInvert($c-green)
+$c-turquoise-invert = findColorInvert($c-turquoise)
+$c-blue-invert = findColorInvert($c-blue)
+$c-purple-invert = findColorInvert($c-purple)
+$c-red-invert = findColorInvert($c-red)
+
+$c-primary-invert = $c-turquoise-invert
+$c-info-invert = $c-blue-invert
+$c-success-invert = $c-green-invert
+$c-warning-invert = $c-yellow-invert
+$c-danger-invert = $c-red-invert
+$c-light-invert = $c-dark
+$c-dark-invert = $c-light
+
+// General colors
+
+$c-background = $c-white-ter
+$c-primary = $c-turquoise
+$c-font = $c-grey-dark
+$c-font-invert = findColorInvert($c-font)
+$c-link = $c-primary
+
+$c-border = $c-grey-lighter
+$c-border-hover = $c-grey-light
+
+$c-info = $c-blue
+$c-success = $c-green
+$c-warning = $c-yellow
+$c-danger = $c-red
+
+$c-light = $c-white-ter
+$c-dark = $c-grey-darker
+
+// Typography
+
+$family-sans-serif = BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+$family-monospace = monospace
+$font-primary = 'Poppins', $family-sans-serif
+$font-secondary = 'Playfair Display', serif
+$render-mode = optimizeLegibility
+
+$size-small = 1.2rem
+$size-regular = 1.6rem
+$size-medium = 2.4rem
+$size-large = 4rem
+
+$weight-light = 300
+$weight-regular = 400
+$weight-medium = 500
+$weight-semibold = 600
+$weight-bold = 700
+
+// Grid
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap = 32px
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet = 769px
+// 960px container + 3rem
+$desktop = 960px + (2 * $gap)
+// 1152px container + 3rem
+$wide = 1152px + (2 * $gap)
+// 1344px container + 3rem
+$fullhd = 1344px + (2 * $gap)
+
+// Miscellaneous
+
+$easing = ease-out
+$radius-small = 2px
+$radius = 3px
+$radius-large = 5px
+$speed = 86ms
