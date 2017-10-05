@@ -1,10 +1,32 @@
 extends mixins/_layout
 
 block vars
-    - var bodyClasses = 'tpl-homepage'
+    - var bodyClasses = 'tpl-styleguide'
 
 block extraScripts
 
 block extraMarkup
 
 block content
+    div.container
+        h1.u-t-center.heading-1 Styleguide
+        h2.heading-2 Color palette
+        div.row.u-t-center
+            div.column
+                p.color-tile.u-b-yellow
+                p.color-title #FFEDB2
+            div.column
+                p.color-tile.u-b-white
+                p.color-title #FFFFFF
+            div.column
+                p.color-tile.u-b-grey-light
+                p.color-title #F3F0DF
+            div.column
+                p.color-tile.u-b-blue
+                p.color-title #A6D6D1
+            div.column
+                p.color-tile.u-b-grey
+                p.color-title #7D7D7D
+            div.column
+                p.color-tile.u-b-black
+                p.color-title #2B2817
