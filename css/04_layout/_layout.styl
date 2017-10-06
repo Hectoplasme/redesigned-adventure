@@ -1,9 +1,11 @@
 .container
     margin 0 auto
+    padding 0 $gap
     position relative
 
     +from($desktop)
         max-width $desktop - (2 * $gap)
+        padding inherit
         width $desktop - (2 * $gap)
 
     &.is-fluid
