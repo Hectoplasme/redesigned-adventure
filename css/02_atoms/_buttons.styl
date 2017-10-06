@@ -1,0 +1,35 @@
+.btn
+    position relative
+    display inline-block
+    background $c-background
+    border $c-black solid 2px
+    color $c-black
+
+    &::before
+        content ''
+        position absolute
+        z-index -1
+        top 0rem
+        left -0rem
+        display block
+        height 100%
+        width 100%
+        background $c-black
+        transition all 200ms ease-in
+
+    &:hover
+        &::before
+            top 1rem
+            left 1rem
+
+    &--blue
+        border-color $c-turquoise
+
+        &::before
+            background $c-turquoise
+
+    &--yellow
+        border-color $c-yellow-light
+
+        &::before
+            background $c-yellow-light
