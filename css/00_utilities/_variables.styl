@@ -16,9 +16,9 @@ $c-white =        hsl(0, 0%, 99%)
 
 $c-orange =       hsl(14,  100%, 53%)
 $c-yellow =       hsl(48,79%,54%)
-$c-yellow-light = hsl(46, 100%, 85%)
+$c-yellow-light = hsl(44, 91%, 64%)
 $c-green =        hsl(141, 71%,  48%)
-$c-turquoise =    hsl(153, 65%, 75%)
+$c-turquoise =    hsl(170,63%,43%)
 $c-blue =         hsl(217, 71%,  53%)
 $c-purple =       hsl(271, 100%, 71%)
 $c-red =          hsl(348, 100%, 61%)
@@ -45,6 +45,7 @@ $c-dark-invert = $c-light
 
 $c-background = $c-white
 $c-primary = $c-turquoise
+$c-secondary = $c-yellow-light
 $c-font = $c-grey-dark
 $c-font-invert = findColorInvert($c-font)
 $c-link = $c-primary
@@ -86,13 +87,15 @@ $weight-bold = 900
 // The container horizontal gap, which acts as the offset for breakpoints
 $gap = 32px
 // 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
-$tablet = 769px
+$tablet = 769px + (2 * $gap)
 // 960px container + 3rem
 $desktop = 960px + (2 * $gap)
+$wide = $desktop
+$fullhd = $wide
 // 1152px container + 3rem
-$wide = 1152px + (2 * $gap)
+//$wide = 1152px + (2 * $gap)
 // 1344px container + 3rem
-$fullhd = 1344px + (2 * $gap)
+//$fullhd = 1344px + (2 * $gap)
 
 // Miscellaneous
 
