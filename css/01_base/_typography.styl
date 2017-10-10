@@ -6,7 +6,7 @@
     color $c-black
     line-height 1
 
-    +desktop()
+    +tablet()
         font-size $size-wide
 
 .heading-2
@@ -19,9 +19,12 @@
     font-primary()
     medium()
     upper()
-    font-size $size-medium
+    font-size $size-smaller
     letter-spacing 1px
     color $c-black
+
+    +desktop()
+        font-size $size-medium
 
 .heading-4
     font-primary()
