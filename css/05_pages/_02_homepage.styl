@@ -1,1 +1,45 @@
+.section
+    &__bg
+        padding-top 30%
+        margin-top -0.8rem
+        background url(/assets/images/pattern.png)
+        background-size 84rem
 
+        +tablet()
+            margin-top -1rem
+
+        +desktop()
+            margin-top -1.5rem
+
+
+    &__fg
+        position absolute
+        bottom 0
+        left -2.5%
+        height 105%
+        width 105%
+        background url(/assets/images/header-fg.png) no-repeat bottom center
+        background-size contain
+        pointer-events none
+
+    &__title
+        pointer-events none
+
+    &__teasing
+        margin-top 1rem
+
+    &--preface
+        padding 5rem 0
+
+        +desktop()
+            padding 8vw 0
+
+        +fullhd()
+            padding 5rem 0
+
+        .section__header
+            position relative
+
+        .section__fg
+            background url(/assets/images/header-fg.png) no-repeat bottom center
+            background-size contain

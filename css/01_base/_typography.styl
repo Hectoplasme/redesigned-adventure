@@ -9,6 +9,12 @@
     +tablet()
         font-size $size-wide
 
+    +desktop()
+        font-size $size-wider
+
+    +wide()
+        font-size $size-super-wider
+
 .heading-2
     font-secondary()
     black()
@@ -17,9 +23,9 @@
 
 .heading-3
     font-primary()
-    medium()
+    bold()
     upper()
-    font-size $size-smaller
+    font-size $size-small
     letter-spacing 1px
     color $c-black
 
@@ -28,11 +34,13 @@
 
 .heading-4
     font-primary()
-    medium()
+    bold()
     upper()
-    font-size $size-regular
+    font-size $size-smaller
     letter-spacing 1px
-    color $c-turquoise
+
+    +tablet()
+        font-size $size-regular
 
 .teasing-1
     font-primary()

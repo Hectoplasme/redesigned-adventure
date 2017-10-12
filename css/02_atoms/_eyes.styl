@@ -1,0 +1,22 @@
+.eyes
+    padding 1rem
+
+    &__inner
+        width 12.2rem
+        height 2.5rem
+        background url(/assets/images/sprite-eye.png) no-repeat
+        background-size cover
+        background-position 0% 50%
+        transition background-position 80ms steps(4,end)
+
+    &:hover
+        cursor pointer
+
+        .eyes__inner
+            background-position 100% 50%
+            transition background-position 200ms steps(4,end)
+
+&--closed
+    .eyes__inner
+        background-position 100% 50%
+        transition background-position 200ms steps(4,end)
