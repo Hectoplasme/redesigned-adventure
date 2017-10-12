@@ -1,4 +1,4 @@
-const sptk = require('./sptk.js'),
+const fern = require('./fern.js'),
     utils = {
         initialize() {
             this.bindUI();
@@ -13,18 +13,18 @@ const sptk = require('./sptk.js'),
 
         bindEvents() {
             // Events for scroll.
-            sptk.utils.$win.on('scroll', this.throttle((event) => {
-                sptk.utils.$body.trigger('page:scrollDebounced', sptk.utils.$win.scrollTop());
+            fern.utils.$win.on('scroll', this.throttle((event) => {
+                fern.utils.$body.trigger('page:scrollDebounced', fern.utils.$win.scrollTop());
             }, 5));
 
-            sptk.utils.$win.on('scroll', (event) => {
-                sptk.utils.$body.trigger('page:scroll', sptk.utils.$win.scrollTop());
+            fern.utils.$win.on('scroll', (event) => {
+                fern.utils.$body.trigger('page:scroll', fern.utils.$win.scrollTop());
             });
 
             // Events for resize.
-            sptk.utils.$win.on('resize', this.debounce((event) => {
-                sptk.utils.$body.trigger('page:resizeDebounced');
-                sptk.utils.$body.trigger('page:scrollDebounced', sptk.utils.$win.scrollTop());
+            fern.utils.$win.on('resize', this.debounce((event) => {
+                fern.utils.$body.trigger('page:resizeDebounced');
+                fern.utils.$body.trigger('page:scrollDebounced', fern.utils.$win.scrollTop());
             }, 30));
 
             // Events for gotos
@@ -103,7 +103,7 @@ const sptk = require('./sptk.js'),
                 $targetHash = $($currentTarget.attr('href')),
                 targetOffset = $targetHash.get(0).offsetTop - 150;
 
-            sptk.utils.goTo(targetOffset, 350);
+            fern.utils.goTo(targetOffset, 350);
         }
     };
 

@@ -1,23 +1,27 @@
 // IE Specifics
-require('es5-shim');
-require('es6-shim');
+// require('es5-shim');
+// require('es6-shim');
 
 //import modules
-const sptk = require('../libs/sptk.js'),
-    utils = require('../libs/utils.js');
+const fern = require('../libs/fern.js'),
+    utils = require('../libs/utils.js'),
+    header = require('./modules/header.js');
 
 
-(function ($, sptk, win) {
+(function ($, fern, win) {
 
     $(function () {
         const app = {
             initialize() {
+                document.querySelector('.js-header').addEventListener('mouseover', () => {
+                    console.log('pouet');
+                });
                 this.bindUI();
                 this.bindEvents();
-                this.sptk.initialize(this);
+                this.fern.initialize(this);
                 utils.initialize();
 
-                if (!sptk.utils.isMobileTablet) {
+                if (!fern.utils.isMobileTablet) {
                     this.initDesktopOnlyModules();
                 } else {
                     this.initMobileOnlyModules();
@@ -34,26 +38,25 @@ const sptk = require('../libs/sptk.js'),
             },
 
             bindEvents() {
-
             },
 
             initDesktopOnlyModules() {
                 // Example
-                //this.sptk.conditionalLoad('.js-sticky', stickyModule.initialize.bind(stickyModule));
+                //this.fern.conditionalLoad('.js-sticky', stickyModule.initialize.bind(stickyModule));
 
             },
 
             initMobileOnlyModules() {
                 // Example
-                //this.sptk.conditionalLoad('.js-mobile-burger', burgerModule.initialize.bind(burgerModule));
+                //this.fern.conditionalLoad('.js-mobile-burger', burgerModule.initialize.bind(burgerModule));
             },
 
             initCommonModules() {
                 // Example
-                //this.sptk.conditionalLoad('.js-video', videoModule.initialize.bind(videoModule));
+                this.fern.conditionalLoad('.js-header', header.initialize.bind(header));
             },
 
-            sptk: {
+            fern: {
                 ctx: null,
 
                 initialize(ctx) {
@@ -65,14 +68,14 @@ const sptk = require('../libs/sptk.js'),
                 },
 
                 initModules() {
-                    sptk.utils.placeholder();
-                    sptk.utils.externalLinks();
+                    fern.utils.placeholder();
+                    fern.utils.externalLinks();
                 },
 
                 initVariables() {
-                    sptk.utils.$body = this.ctx.ui.$body;
-                    sptk.utils.$html = this.ctx.ui.$html;
-                    sptk.utils.$win = this.ctx.ui.$win;
+                    fern.utils.$body = this.ctx.ui.$body;
+                    fern.utils.$html = this.ctx.ui.$html;
+                    fern.utils.$win = this.ctx.ui.$win;
                 },
 
                 checkBrowsers() {
@@ -81,7 +84,7 @@ const sptk = require('../libs/sptk.js'),
                             window.isIE10 = true;
                             window.isIE = true;
 
-                            sptk.utils.$body.addClass('is-ie10');
+                            fern.utils.$body.addClass('is-ie10');
                         }
                     @*/
 
@@ -89,13 +92,13 @@ const sptk = require('../libs/sptk.js'),
                         window.isIE11 = true;
                         window.isIE = true;
 
-                        sptk.utils.$body.addClass('is-ie11');
+                        fern.utils.$body.addClass('is-ie11');
                     }
 
                     if (!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) {
                         window.isSafari = true;
 
-                        sptk.utils.$body.addClass('is-safari');
+                        fern.utils.$body.addClass('is-safari');
                     }
                 },
 
@@ -112,4 +115,4 @@ const sptk = require('../libs/sptk.js'),
         });
     });
 
-})(jQuery, sptk, window);
+})(jQuery, fern, window);
