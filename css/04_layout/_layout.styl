@@ -3,31 +3,14 @@
     padding 0 $gap
     position relative
 
-    +from($desktop)
-        max-width $desktop - (2 * $gap)
-        padding inherit
-        width $desktop - (2 * $gap)
+    +tablet()
+        padding 0 (2 * $gap)
 
-    &.is-fluid
-        margin-left $gap
-        margin-right $gap
-        max-width none
-        width auto
+    +wide()
+        padding 0 (4 * $gap)
 
-    +until($wide)
-        &.is-wide
-            max-width $wide - (2 * $gap)
-            width auto
-
-    +until($fullhd)
-        &.is-fullhd
-            max-width $fullhd - (2 * $gap)
-            width auto
-
-    +from($wide)
-        max-width $wide - (2 * $gap)
-        width $wide - (2 * $gap)
-
-    +from($fullhd)
+    +fullhd()
         max-width $fullhd - (2 * $gap)
+
+        padding inherit
         width $fullhd - (2 * $gap)
