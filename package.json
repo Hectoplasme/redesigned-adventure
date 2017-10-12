@@ -8,6 +8,7 @@
     "babel-preset-stage-1": "^6.22.0",
     "es5-shim": "^4.5.9",
     "es6-shim": "^0.35.3",
+    "gsap": "^1.20.3",
     "gulp-pug": "^3.2.0",
     "gulp-stylus": "^2.6.0",
     "photo-sphere-viewer": "^3.2.3",
