@@ -1,6 +1,6 @@
 // IE Specifics
-// require('es5-shim');
-// require('es6-shim');
+require('es5-shim');
+require('es6-shim');
 
 //import modules
 const fern = require('../libs/fern.js'),
@@ -13,9 +13,6 @@ const fern = require('../libs/fern.js'),
     $(function () {
         const app = {
             initialize() {
-                document.querySelector('.js-header').addEventListener('mouseover', () => {
-                    console.log('pouet');
-                });
                 this.bindUI();
                 this.bindEvents();
                 this.fern.initialize(this);
