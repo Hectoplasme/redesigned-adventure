@@ -1,6 +1,5 @@
 .DS_Store
 
-dist/
+01_dist/
 node_modules/
-static/
 npm-debug.log
