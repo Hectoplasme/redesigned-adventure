@@ -1,0 +1,1 @@
+{"version":3,"sources":["ui.styl","ui.css"],"names":[],"mappings":"AAAA;EACI,YAAA;CCCH","file":"../ui.css","sourcesContent":[".padoum\r\n    color red\r\n",".padoum {\n  color: #f00;\n}\n"]}

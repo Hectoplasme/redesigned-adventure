@@ -7,8 +7,8 @@
         "maps": "maps/",
         "fonts": "fonts/",
         "assets": "assets/",
-        "src": "src/gulp/",
-        "tasks": "tasks/",
-        "dist": "static/"
+        "src": "00_src/",
+        "dist": "01_dist/",
+        "tasks": "02_tasks/"
     }
 }

@@ -1,0 +1,39 @@
+doctype html
+html(lang="fr")
+    head
+        meta(charset="utf8")
+        meta(name="viewport" content="width=device-width, user-scalable=no")
+        link(rel="stylesheet" media="screen" type="text/css" href="assets/css/styles.css")
+
+    body(class="tpl-ui-styleguide")
+        main.container(role="main")
+            h1.u-t-center.heading-1 Styleguide
+            div.section.section--color
+                h2.heading-3 Color palette
+                div.row.u-t-center
+                    div.column
+                        p.color-tile.u-b-primary
+                        p.color-title #F7CA50
+
+            div.section.section--pattern
+                h2.heading-3 Patterns
+                div.row.u-t-center
+                    div.column
+                        p.color-tile.u-b-pattern
+            div.section.section--typography
+                h2.heading-3 Typography
+                div.row
+                    div.column.section__left.is-6-desktop.is-5
+                        p.heading-1 Header H1
+                        p.teasing-1 Playfair weight size color
+                    div.column.section__left.is-5-desktop.is-offset-1-desktop
+                        p.text This is a paragraph using Poppins Regular at 16px with a 25px line height and a 1px letter spacing, cat ipsum dolor sit amet, spill litter box, scratch at owner, destroy all furniture, especially couch. Lick plastic bags swat at dog. Play riveting piece on synthesizer keyboard chase the pig around the house plan steps for world domination scratch the furniture for unwrap toilet paper this cat happen now, it was too purr-fect!!!. Gate keepers of hell kitty poochy for stand in front of the computer screen.
+                        p.text #[span.bold This is a bold text]. Cat ipsum dolor sit amet, spill litter box, scratch at owner, destroy all furniture, especially couch. #[a.link(href="#") And this is a link] and #[a.link(href="#") And this is a long long link to see the behaviour when it takes more than a line .]  A link can be #[a.link.link--blue(href="#") blue too].
+            div.section.section--buttons
+                h2.heading-3 Buttons
+                div.row.is-mobile
+                    div.column
+                        a.btn(href="#") Discover
+                        p.teasing-1 Regular button
+
+    include partials/_scripts
