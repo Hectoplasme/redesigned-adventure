@@ -4,6 +4,15 @@
             light()
             font-size 6vw
 
+            +tablet()
+                font-size $size-larger - 1rem
+
+            +desktop()
+                ultra-light()
+
+            +wide()
+                font-size $size-super-large - 2rem
+
             strong
                 font-secondary()
                 black()
@@ -15,8 +24,10 @@
                 +desktop()
                     font-size $size-super-large
 
-            +tablet()
-                font-size $size-larger - 1rem
+                +wide()
+                    font-size $size-super-larger - 2rem
+
+
 
     p
         @extends .text

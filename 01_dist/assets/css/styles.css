@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:700,900,900i");
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:100,200,300,400,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700");
 .column {
   display: block;
   -ms-flex-preferred-size: 0;
@@ -1234,40 +1234,43 @@
   $column-gap: 1.75rem;
 }
 .u-c-background {
-  color: #fff;
+  color: #fff !important;
 }
 .u-c-primary {
-  color: #5ee6a8;
+  color: #5ee6a8 !important;
 }
 .u-c-secondary {
-  color: #4a3c4e;
+  color: #4a3c4e !important;
 }
 .u-c-white {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
-  color: #fff;
+  color: #fff !important;
 }
 .u-c-black {
-  color: #251a28;
+  color: #251a28 !important;
 }
 .u-c-grey {
-  color: #e5ffed;
+  color: #e5ffed !important;
+}
+.u-c-grey-dark {
+  color: #79727b !important;
 }
 .u-b-primary {
-  background: #5ee6a8;
+  background: #5ee6a8 !important;
 }
 .u-b-secondary {
-  background: #4a3c4e;
+  background: #4a3c4e !important;
 }
 .u-b-grey {
-  background: #e5ffed;
+  background: #e5ffed !important;
 }
 .u-b-black {
-  background: #251a28;
+  background: #251a28 !important;
 }
 .u-b-white {
-  background: #fff;
+  background: #fff !important;
 }
 .u-b-pattern {
   background: url("../images/pattern.jpg");
@@ -1646,7 +1649,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
-  font-weight: 300;
+  font-weight: 100;
 }
 .logo {
   font-family: 'Playfair Display', serif;
@@ -1656,9 +1659,9 @@ body {
   font-smoothing: antialiased;
   font-weight: 900;
   font-size: 2.2rem;
-  color: #4a3c4e;
 }
-.menu {
+.header__nav .menu,
+.footer__nav .menu {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0px;
   -webkit-font-smoothing: antialiased;
@@ -1673,19 +1676,20 @@ body {
   letter-spacing: 5px;
   line-height: 2;
 }
-.menu .is-active {
+@media all and (min-width: 48em) {
+  .header__nav .menu,
+  .footer__nav .menu {
+    font-size: 6.1rem;
+  }
+}
+.header__nav .menu .is-active {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   font-weight: 700;
 }
-@media all and (min-width: 48em) {
-  .menu {
-    font-size: 6.1rem;
-  }
-}
 @media all and (min-width: 60.4em) {
-  .menu {
+  .header__nav .menu {
     font-family: 'Poppins', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     letter-spacing: 1px;
     -webkit-font-smoothing: antialiased;
@@ -1697,6 +1701,11 @@ body {
     font-style: normal;
     letter-spacing: 1px;
     color: #4a3c4e;
+  }
+}
+@media all and (min-width: 60.4em) {
+  .footer__nav .menu {
+    line-height: 1;
   }
 }
 .copyright {
@@ -1716,16 +1725,21 @@ body {
     max-width: 100%;
   }
 }
+@media all and (min-width: 60.4em) {
+  .copyright {
+    text-align: right;
+  }
+}
 .btn {
   display: inline-block;
-  padding: 0.1rem 0.5rem 0.5rem;
-  background: repeating-linear-gradient(180deg, transparent, transparent 60%, #5ee6a8 60%, #5ee6a8 98%);
+  padding: 0.5rem 0.5rem;
+  background: repeating-linear-gradient(180deg, transparent -1%, transparent 60%, #5ee6a8 60%, #5ee6a8 100%);
 }
 .btn:hover {
-  background: repeating-linear-gradient(180deg, transparent, transparent 0rem, #5ee6a8 0rem, #5ee6a8 98%);
+  background: repeating-linear-gradient(180deg, transparent -1%, transparent 0rem, #5ee6a8 0rem, #5ee6a8 100%);
 }
 .section--dark .btn {
-  background: repeating-linear-gradient(180deg, transparent, transparent 60%, #4a3c4e 60%, #4a3c4e 98%);
+  background: repeating-linear-gradient(180deg, transparent -1%, transparent 60%, #4a3c4e 60%, #4a3c4e 100%);
 }
 .section--dark .btn:hover {
   background: repeating-linear-gradient(180deg, transparent, transparent 0rem, #4a3c4e 0rem, #4a3c4e 98%);
@@ -1737,12 +1751,12 @@ body {
   font-smoothing: antialiased;
   font-weight: 700;
   display: inline;
-  padding: 0.1rem 0.5rem;
-  background: repeating-linear-gradient(180deg, transparent, transparent 60%, #5ee6a8 60%, #5ee6a8 99%);
+  padding: 0.3rem 0.5rem;
+  background: repeating-linear-gradient(180deg, transparent -1%, transparent 60%, #5ee6a8 60%, #5ee6a8 100%);
 }
 .link:hover,
 .rte a:hover {
-  background: repeating-linear-gradient(180deg, transparent, transparent 0%, #5ee6a8 0%, #5ee6a8 99%);
+  background: repeating-linear-gradient(180deg, transparent -1%, transparent 0%, #5ee6a8 0%, #5ee6a8 100%);
 }
 .section--dark .link,
 .section--dark .menu a,
@@ -1750,10 +1764,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
-  font-weight: 700;
+  font-weight: 400;
   display: inline;
-  padding: 0.2rem 0.5rem;
-  background: repeating-linear-gradient(180deg, transparent, transparent 60%, #4a3c4e 60%, #4a3c4e 100%);
+  padding: 0.3rem 0.5rem;
+  background: repeating-linear-gradient(180deg, transparent -1%, transparent 60%, #4a3c4e 60%, #4a3c4e 100%);
 }
 .section--dark .link:hover,
 .section--dark .menu a:hover,
@@ -1763,7 +1777,31 @@ body {
 .banner {
   height: 80vh;
   min-height: 40rem;
+  overflow: hidden;
+}
+@media all and (min-width: 72.4em) {
+  .banner {
+    height: 93vh;
+  }
+}
+.banner__bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: 300%;
+  -webkit-animation: waves-touch 30s linear infinite;
+          animation: waves-touch 30s linear infinite;
+}
+@media all and (min-width: 72.4em) {
+  .banner__bg {
+    background-size: 110%;
+    background-position: 50% 50%;
+    -webkit-animation: waves 15s linear infinite;
+            animation: waves 15s linear infinite;
+  }
 }
 .banner__inner {
   position: relative;
@@ -1778,6 +1816,67 @@ body {
   .banner__title {
     left: 6.4rem;
     bottom: 6.4rem;
+  }
+}
+@media all and (min-width: 72.4em) {
+  .banner__title {
+    bottom: 12rem;
+  }
+}
+@-webkit-keyframes waves {
+  0% {
+    background-size: 120%;
+    background-position: 50% 50%;
+  }
+  50% {
+    background-size: 125%;
+    background-position: 80% 50%;
+  }
+  100% {
+    background-size: 120%;
+    background-position: 50% 50%;
+  }
+}
+@keyframes waves {
+  0% {
+    background-size: 120%;
+    background-position: 50% 50%;
+  }
+  50% {
+    background-size: 125%;
+    background-position: 80% 50%;
+  }
+  100% {
+    background-size: 120%;
+    background-position: 50% 50%;
+  }
+}
+@-webkit-keyframes waves-touch {
+  0% {
+    background-size: 300%;
+    background-position: 50% 50%;
+  }
+  50% {
+    background-size: 305%;
+    background-position: 60% 60%;
+  }
+  100% {
+    background-size: 300%;
+    background-position: 50% 50%;
+  }
+}
+@keyframes waves-touch {
+  0% {
+    background-size: 300%;
+    background-position: 50% 50%;
+  }
+  50% {
+    background-size: 305%;
+    background-position: 60% 60%;
+  }
+  100% {
+    background-size: 300%;
+    background-position: 50% 50%;
   }
 }
 .nav {
@@ -1822,8 +1921,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-size: 200%;
-  -webkit-transition: top 200ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
-  transition: top 200ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
+  -webkit-transition: top 250ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
+  transition: top 250ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
 }
 .nav__inner .nav__toggler {
   position: absolute;
@@ -1857,15 +1956,15 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     position: fixed;
-    top: 0;
+    top: 3.2rem;
     right: 0;
-    width: 40rem;
+    width: 50rem;
   }
 }
 .nav-open .nav__inner {
   top: 0;
-  -webkit-transition: top 200ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
-  transition: top 200ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
+  -webkit-transition: top 250ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
+  transition: top 250ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
 }
 .project {
   padding: 4.5rem 0 6rem;
@@ -1892,8 +1991,19 @@ body {
     background-size: 60%;
   }
 }
+@media all and (min-width: 60.4em) {
+  .footer__inner {
+    background-size: 80%;
+  }
+}
 .footer__bottom {
   margin-top: 4rem;
+}
+@media all and (min-width: 72.4em) {
+  .footer__bottom {
+    margin: 2rem 0 0;
+    padding: 0;
+  }
 }
 @media all and (min-width: 48em) {
   .footer.section {
@@ -1906,7 +2016,25 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    max-width: 60rem;
     font-size: 3.1rem;
+  }
+}
+@media all and (min-width: 48em) and (min-width: 60.4em) {
+  .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 3.2rem 0;
+  }
+  .footer .menu {
+    width: 80rem;
   }
 }
 .header {
@@ -1931,8 +2059,14 @@ body {
 }
 @media all and (min-width: 60.4em) {
   .header__logo {
+    position: absolute;
+    top: 3.2rem;
+    left: 3.2rem;
+  }
+}
+@media all and (min-width: 72.4em) {
+  .header__logo {
     position: fixed;
-    color: #4a3c4e;
   }
 }
 .container {
@@ -1988,6 +2122,24 @@ body {
   font-weight: 300;
   font-size: 6vw;
 }
+@media all and (min-width: 48em) {
+  .rte.banner__title h1 {
+    font-size: 5.1rem;
+  }
+}
+@media all and (min-width: 60.4em) {
+  .rte.banner__title h1 {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    font-weight: 100;
+  }
+}
+@media all and (min-width: 72.4em) {
+  .rte.banner__title h1 {
+    font-size: 5.2rem;
+  }
+}
 .rte.banner__title h1 strong {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0px;
@@ -2007,9 +2159,9 @@ body {
     font-size: 7.2rem;
   }
 }
-@media all and (min-width: 48em) {
-  .rte.banner__title h1 {
-    font-size: 5.1rem;
+@media all and (min-width: 72.4em) {
+  .rte.banner__title h1 strong {
+    font-size: 8.5rem;
   }
 }
 .rte p + p {
@@ -2017,9 +2169,18 @@ body {
 }
 .section {
   padding: 4.5rem 0 6rem;
+  background: #fff;
+}
+.section--dark {
+  background: #251a28;
 }
 .section__title {
   margin-bottom: 2rem;
+}
+@media all and (min-width: 60.4em) {
+  .section__title {
+    margin-bottom: 5rem;
+  }
 }
 .section__subtitle,
 .section__teasing {

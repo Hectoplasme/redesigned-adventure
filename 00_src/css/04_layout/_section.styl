@@ -1,8 +1,15 @@
 .section
     padding 4.5rem 0 6rem
+    background $c-white
+
+    &--dark
+        background $c-black
 
     &__title
         margin-bottom 2rem
+
+        +desktop()
+            margin-bottom 5rem
 
     &__subtitle, &__teasing
         margin-bottom 3rem
@@ -13,7 +20,7 @@
     &__right
         +tablet()
             padding-left $gap
-            
+
         +desktop()
             padding-left (2 * $gap)
 

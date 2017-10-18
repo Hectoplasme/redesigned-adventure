@@ -7,7 +7,7 @@
   </head>
   <body class="tpl-homepage frontpage">
     <header class="header">
-      <h1 class="header__logo">Laurianne Terrier</h1>
+      <h1 class="header__logo u-c-secondary"><a href="#">Laurianne Terrier</a></h1>
       <div class="header__nav nav js-nav">
         <button class="nav__toggler js-nav-open">Menu</button>
         <nav class="nav__inner u-b-pattern">
@@ -15,23 +15,24 @@
             <button class="nav__toggler js-nav-close">Menu</button>
           </div>
           <ul class="menu">
-            <li class="is-active"><a>Accueil</a></li>
-            <li><a>Projets</a></li>
-            <li><a>A propos</a></li>
-            <li><a>Contact</a></li>
+            <li class="is-active"><a class="gotos" href="#accueil">Accueil</a></li>
+            <li><a class="gotos" href="#projet">Projets</a></li>
+            <li><a class="gotos" href="#a-propos">A propos</a></li>
+            <li><a class="gotos" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main" role="main">
-      <section class="banner u-b-pattern">
+      <section class="banner" id="accueil">
+        <div class="banner__bg u-b-pattern"></div>
         <div class="container banner__inner">
           <div class="banner__title rte">
             <h1><strong>Développeuse</strong> web <br> <strong>Illustratrice</strong> onirique <br> <strong>Exploratrice</strong> imaginaire</h1>
           </div>
         </div>
       </section>
-      <section class="section project section--dark">
+      <section class="section project section--dark" id="projets">
         <div class="container project__inner">
           <h2 class="project__title heading-2">Luditales</h2>
           <p class="project__subtitle teasing-2">Identité graphique & développement</p>
@@ -53,7 +54,7 @@
           <button class="btn">Voir le projet</button>
         </div>
       </section>
-      <section class="section u-b-grey">
+      <section class="section u-b-grey" id="a-propos">
         <div class="container">
           <h2 class="section__title heading-1">A propos</h2>
           <div class="row">
@@ -71,10 +72,14 @@
         </div>
       </section>
     </main>
-    <footer class="footer u-b-black section section--dark">
+    <footer class="footer u-b-black section section--dark" id="footer">
       <div class="container footer__inner">
         <h2 class="section__title heading-1">Contact</h2>
-        <p class="section__teasing teasing-1">Intéréssé.e ? N’hésitez pas à m’envoyer un petit mot ou retrouvez moi sur les réseaux sociaux.</p>
+        <div class="row">
+          <div class="column is-one-third-desktop">
+            <p class="section__teasing teasing-1">Intéréssé.e ? N’hésitez pas à m’envoyer un petit mot ou retrouvez moi sur les réseaux sociaux.</p>
+          </div>
+        </div>
         <nav class="footer__nav">
           <ul class="menu">
             <li><a href="#">Mail</a></li>
@@ -82,8 +87,8 @@
             <li><a href="#">Github</a></li>
             <li><a href="#">Tumblr</a></li>
           </ul>
+          <p class="footer__bottom u-c-grey-dark copyright">©2017 Laurianne Terrier, All Rights Reserved | <a href="#">Mentions légales</a></p>
         </nav>
-        <p class="footer__bottom u-c-white copyright">©2017 Laurianne Terrier, All Rights Reserved | <a href="#">Mentions légales</a></p>
       </div>
     </footer>
   </body>

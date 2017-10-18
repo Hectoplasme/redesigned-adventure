@@ -10,14 +10,33 @@
             background url(/assets/images/contact.png) no-repeat center right
             background-size 60%
 
+        +desktop()
+            background-size 80%
+
     &__bottom
         margin-top 4rem
+
+        +wide()
+            margin 2rem 0 0
+            padding 0
+
 
     +tablet()
         &.section
             padding-bottom 4rem
+
         &__nav
             .menu
                 display flex
                 justify-content space-between
+                max-width 60rem
                 font-size $size-large
+
+            +desktop()
+                display flex
+                justify-content space-between
+                align-items center
+                padding $gap 0
+
+                .menu
+                    width 80rem

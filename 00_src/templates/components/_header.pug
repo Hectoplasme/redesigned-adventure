@@ -1,12 +1,13 @@
 header.header
-    h1.header__logo Laurianne Terrier
+    h1.header__logo.u-c-secondary
+        a(href="#") Laurianne Terrier
     div.header__nav.nav.js-nav
         button.nav__toggler.js-nav-open Menu
         nav.nav__inner.u-b-pattern
             div.nav__header
                 button.nav__toggler.js-nav-close Menu
             ul.menu
-                li.is-active #[a Accueil]
-                li #[a Projets]
-                li #[a A propos]
-                li #[a Contact]
+                li.is-active #[a.gotos(href="#accueil") Accueil]
+                li #[a.gotos(href="#projet") Projets]
+                li #[a.gotos(href="#a-propos") A propos]
+                li #[a.gotos(href="#contact") Contact]

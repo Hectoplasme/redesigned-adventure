@@ -65,16 +65,15 @@
         color $c-white
 
     .text, .rte p, .teasing-1, .teasing-2
-        light()
+        ultra-light()
 
 //Specifics
 .logo
     font-secondary()
     black()
     font-size $size-medium
-    color $c-secondary
 
-.menu
+.header__nav .menu, .footer__nav .menu
     font-secondary()
     black()
     italic()
@@ -82,11 +81,12 @@
     letter-spacing 5px
     line-height 2
 
-    .is-active
-        bold()
-
     +tablet()
         font-size $size-larger
+
+.header__nav .menu
+    .is-active
+        bold()
 
     +desktop()
         font-primary()
@@ -96,6 +96,10 @@
         font-style normal
         letter-spacing 1px
         color $c-secondary
+
+.footer__nav .menu
+    +desktop()
+        line-height 1
 
 .copyright
     font-primary()
@@ -107,3 +111,6 @@
 
     +tablet()
         max-width 100%
+
+    +desktop()
+        text-align right
