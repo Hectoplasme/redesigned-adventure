@@ -2,7 +2,10 @@
 .heading-1
     font-secondary()
     black()
-    font-size $size-super-larger
+    font-size $size-larger - 0.5rem
+
+    +tablet()
+        font-size $size-super-larger
 
 .heading-2
     font-secondary()
@@ -21,7 +24,10 @@
 .teasing-1
     font-primary()
     light()
-    font-size $size-large
+    font-size $size-medium
+
+    +tablet()
+        font-size $size-large
 
 .teasing-2
     font-primary()

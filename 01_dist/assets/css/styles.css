@@ -1527,7 +1527,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   font-weight: 900;
-  font-size: 10.5rem;
+  font-size: 5.6rem;
+}
+@media all and (min-width: 48.0625em) {
+  .heading-1 {
+    font-size: 10.5rem;
+  }
 }
 .heading-2 {
   font-family: 'Playfair Display', serif;
@@ -1563,7 +1568,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   font-weight: 300;
-  font-size: 3.1rem;
+  font-size: 2.2rem;
+}
+@media all and (min-width: 48.0625em) {
+  .teasing-1 {
+    font-size: 3.1rem;
+  }
 }
 .teasing-2 {
   font-family: 'Poppins', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -1859,6 +1869,19 @@ body {
 }
 .rte p + p {
   margin-top: 2rem;
+}
+.section {
+  padding: 4.5rem 0 6rem;
+}
+.section__title {
+  margin-bottom: 2rem;
+}
+.section__subtitle,
+.section__teasing {
+  margin-bottom: 3rem;
+}
+.section__content {
+  margin-bottom: 4rem;
 }
 .tpl-styleguide .heading-1 {
   margin-bottom: 4rem;
