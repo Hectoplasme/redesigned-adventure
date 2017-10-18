@@ -1,12 +1,12 @@
 .btn
     display inline-block
-    padding 0 0.5rem
+    padding 0 0.5rem 0.5rem
     background repeating-linear-gradient(
         180deg,
         transparent,
-        transparent 2.3rem,
-        $c-primary 2.3rem,
-        $c-primary 3.45rem
+        transparent 1.8rem,
+        $c-primary 1.8rem,
+        $c-primary 3.6rem
     )
 
     &:hover
@@ -17,3 +17,22 @@
             $c-primary 0rem,
             $c-primary 100%
         )
+
+.section--dark
+    .btn
+        background repeating-linear-gradient(
+            180deg,
+            transparent,
+            transparent 1.8rem,
+            $c-secondary 1.8rem,
+            $c-secondary 3.6rem
+        )
+
+        &:hover
+            background repeating-linear-gradient(
+                180deg,
+                transparent,
+                transparent 0rem,
+                $c-secondary 0rem,
+                $c-secondary 100%
+            )

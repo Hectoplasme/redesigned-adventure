@@ -1,3 +1,4 @@
+//generics
 .heading-1
     font-secondary()
     black()
@@ -6,7 +7,10 @@
 .heading-2
     font-secondary()
     black()
-    font-size $size-super-large
+    font-size $size-larger - 1.5rem
+
+    +tablet()
+        font-size $size-super-large
 
 .heading-3
     font-secondary()
@@ -28,8 +32,11 @@
 .text
     font-primary()
     regular()
-    font-size $size-regular
+    font-size $size-smaller
     line-height 1.8
+
+    +tablet()
+        font-size $size-regular
 
 .bold
     bold()
@@ -41,6 +48,17 @@
     font-size $size-medium
     letter-spacing 5px
 
+//Color alternative
+.section--dark
+    background $c-black
+
+    .heading-2
+        color $c-primary
+
+    .text, .rte p, .teasing-2, .btn, .link
+        color $c-white
+
+//Specifics
 .logo
     font-secondary()
     black()

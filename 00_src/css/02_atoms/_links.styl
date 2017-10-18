@@ -18,3 +18,25 @@
             $c-primary 0%,
             $c-primary 100%
         )
+
+.section--dark
+    .link, a
+        bold()
+        display inline
+        padding 0 0.5rem
+        background repeating-linear-gradient(
+            180deg,
+            transparent,
+            transparent 60%,
+            $c-secondary 60%,
+            $c-secondary 100%
+        )
+
+        &:hover
+            background repeating-linear-gradient(
+                180deg,
+                transparent,
+                transparent 0%,
+                $c-secondary 0%,
+                $c-secondary 100%
+            )

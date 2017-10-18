@@ -1237,10 +1237,10 @@
   color: #fff;
 }
 .u-c-primary {
-  color: #a9e5bb;
+  color: #5ee6a8;
 }
 .u-c-secondary {
-  color: #302533;
+  color: #4a3c4e;
 }
 .u-c-white {
   -webkit-font-smoothing: antialiased;
@@ -1255,10 +1255,10 @@
   color: #d3f7de;
 }
 .u-b-primary {
-  background: #a9e5bb;
+  background: #5ee6a8;
 }
 .u-b-secondary {
-  background: #302533;
+  background: #4a3c4e;
 }
 .u-b-grey {
   background: #d3f7de;
@@ -1387,9 +1387,15 @@ display none !important .is-visible-m,
   text-transform: uppercase !important;
 }
 .u-t-bold {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 700;
 }
 .u-t-italic {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-style: italic;
 }
 .u-block {
@@ -1504,6 +1510,9 @@ html {
 body {
   font-family: 'Poppins', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 400;
   overflow-y: auto;
   overflow-x: hidden;
@@ -1514,19 +1523,36 @@ body {
 .heading-1 {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 900;
   font-size: 10.5rem;
 }
 .heading-2 {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 900;
-  font-size: 7.2rem;
+  font-size: 4.6rem;
+}
+@media all and (min-width: 48.0625em) {
+  .heading-2 {
+    font-size: 7.2rem;
+  }
 }
 .heading-3 {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-style: italic;
   font-size: 6.1rem;
 }
@@ -1542,68 +1568,143 @@ body {
 .teasing-2 {
   font-family: 'Poppins', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 1.4rem;
 }
-.text {
+.text,
+.rte p {
   font-family: 'Poppins', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.8;
 }
+@media all and (min-width: 48.0625em) {
+  .text,
+  .rte p {
+    font-size: 1.6rem;
+  }
+}
 .bold {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 700;
 }
 .btn {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-style: italic;
   font-size: 2.2rem;
   letter-spacing: 5px;
 }
+.section--dark {
+  background: #251a28;
+}
+.section--dark .heading-2 {
+  color: #5ee6a8;
+}
+.section--dark .text,
+.section--dark .rte p,
+.section--dark .teasing-2,
+.section--dark .btn,
+.section--dark .link {
+  color: #fff;
+}
 .logo {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 900;
   font-size: 2.2rem;
 }
 .menu {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-style: italic;
   font-size: 3.1rem;
   letter-spacing: 5px;
   line-height: 2;
 }
 .menu .is-active {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 700;
 }
 .copyright {
   font-family: 'Poppins', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 400;
   font-size: 1.2rem;
 }
 .btn {
   display: inline-block;
-  padding: 0 0.5rem;
-  background: repeating-linear-gradient(180deg, transparent, transparent 2.3rem, #a9e5bb 2.3rem, #a9e5bb 3.45rem);
+  padding: 0 0.5rem 0.5rem;
+  background: repeating-linear-gradient(180deg, transparent, transparent 1.8rem, #5ee6a8 1.8rem, #5ee6a8 3.6rem);
 }
 .btn:hover {
-  background: repeating-linear-gradient(180deg, transparent, transparent 0rem, #a9e5bb 0rem, #a9e5bb 100%);
+  background: repeating-linear-gradient(180deg, transparent, transparent 0rem, #5ee6a8 0rem, #5ee6a8 100%);
 }
-.link {
+.section--dark .btn {
+  background: repeating-linear-gradient(180deg, transparent, transparent 1.8rem, #4a3c4e 1.8rem, #4a3c4e 3.6rem);
+}
+.section--dark .btn:hover {
+  background: repeating-linear-gradient(180deg, transparent, transparent 0rem, #4a3c4e 0rem, #4a3c4e 100%);
+}
+.link,
+.rte a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 700;
   display: inline;
   padding: 0 0.5rem;
-  background: repeating-linear-gradient(180deg, transparent, transparent 60%, #a9e5bb 60%, #a9e5bb 100%);
+  background: repeating-linear-gradient(180deg, transparent, transparent 60%, #5ee6a8 60%, #5ee6a8 100%);
 }
-.link:hover {
-  background: repeating-linear-gradient(180deg, transparent, transparent 0%, #a9e5bb 0%, #a9e5bb 100%);
+.link:hover,
+.rte a:hover {
+  background: repeating-linear-gradient(180deg, transparent, transparent 0%, #5ee6a8 0%, #5ee6a8 100%);
+}
+.section--dark .link,
+.section--dark a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  font-weight: 700;
+  display: inline;
+  padding: 0 0.5rem;
+  background: repeating-linear-gradient(180deg, transparent, transparent 60%, #4a3c4e 60%, #4a3c4e 100%);
+}
+.section--dark .link:hover,
+.section--dark a:hover {
+  background: repeating-linear-gradient(180deg, transparent, transparent 0%, #4a3c4e 0%, #4a3c4e 100%);
 }
 .banner {
   height: 80vh;
@@ -1636,7 +1737,7 @@ body {
   cursor: pointer;
 }
 .nav__inner {
-  position: absolute;
+  position: fixed;
   z-index: 11;
   top: -100vh;
   left: 0;
@@ -1649,8 +1750,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-size: 200%;
-  -webkit-transition: top 200ms cubic-bezier(0.51, -0.03, 0.18, 1.08);
-  transition: top 200ms cubic-bezier(0.51, -0.03, 0.18, 1.08);
+  -webkit-transition: top 200ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
+  transition: top 200ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
 }
 .nav__inner .header__logo {
   position: absolute;
@@ -1669,8 +1770,20 @@ body {
 }
 .nav-open .nav__inner {
   top: 0;
-  -webkit-transition: top 200ms cubic-bezier(0.51, -0.03, 0.18, 1.08);
-  transition: top 200ms cubic-bezier(0.51, -0.03, 0.18, 1.08);
+  -webkit-transition: top 200ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
+  transition: top 200ms cubic-bezier(0.51, -0.03, 0.13, 0.98);
+}
+.project {
+  padding: 4.5rem 0 6rem;
+}
+.project__title {
+  margin-bottom: 2rem;
+}
+.project__subtitle {
+  margin-bottom: 3rem;
+}
+.project__content {
+  margin-bottom: 4rem;
 }
 .header {
   position: absolute;
@@ -1679,6 +1792,9 @@ body {
 .header__logo {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 900;
   width: 10rem;
   font-size: 2.2rem;
@@ -1735,8 +1851,14 @@ body {
 .rte.banner__title h1 strong {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
   font-weight: 900;
   font-size: 7vw;
+}
+.rte p + p {
+  margin-top: 2rem;
 }
 .tpl-styleguide .heading-1 {
   margin-bottom: 4rem;
