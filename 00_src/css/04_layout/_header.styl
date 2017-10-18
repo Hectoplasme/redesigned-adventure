@@ -2,9 +2,16 @@
     position absolute
     padding $gap
 
+    +tablet()
+        padding (2 * $gap)
+
     &__logo
         font-secondary()
         black()
         width 10rem
         font-size $size-medium
         line-height 1.1
+
+        +desktop()
+            position fixed
+            color $c-secondary

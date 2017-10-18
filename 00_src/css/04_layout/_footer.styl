@@ -1,0 +1,23 @@
+.footer
+    &.section
+        padding-bottom 2rem
+
+    &__inner
+        background url(/assets/images/contact.png) no-repeat 50% 80%
+        background-size 80%
+
+        +tablet()
+            background url(/assets/images/contact.png) no-repeat center right
+            background-size 60%
+
+    &__bottom
+        margin-top 4rem
+
+    +tablet()
+        &.section
+            padding-bottom 4rem
+        &__nav
+            .menu
+                display flex
+                justify-content space-between
+                font-size $size-large

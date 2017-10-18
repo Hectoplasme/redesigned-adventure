@@ -9,3 +9,13 @@
 
     &__content
         margin-bottom 4rem
+
+    &__right
+        +tablet()
+            padding-left $gap
+            
+        +desktop()
+            padding-left (2 * $gap)
+
+    +tablet()
+        padding (2 * $gap)  0 (2 * $gap + 2rem)

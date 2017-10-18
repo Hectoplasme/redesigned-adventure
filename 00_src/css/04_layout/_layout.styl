@@ -3,6 +3,9 @@
     position relative
     padding 0 $gap
 
+    +tablet()
+        padding 0 (2 * $gap)    
+
     +from($desktop)
         max-width $desktop - (2 * $gap)
         width $desktop - (2 * $gap)

@@ -47,7 +47,7 @@
 .bold
     bold()
 
-.btn
+.btn, .footer .menu a
     font-secondary()
     black()
     italic()
@@ -58,17 +58,21 @@
 .section--dark
     background $c-black
 
-    .heading-2
+    .heading-2, .heading-1
         color $c-primary
 
-    .text, .rte p, .teasing-2, .btn, .link
+    .text, .rte p, .teasing-1, .teasing-2, .btn, .link, .menu a
         color $c-white
+
+    .text, .rte p, .teasing-1, .teasing-2
+        light()
 
 //Specifics
 .logo
     font-secondary()
     black()
     font-size $size-medium
+    color $c-secondary
 
 .menu
     font-secondary()
@@ -81,7 +85,25 @@
     .is-active
         bold()
 
+    +tablet()
+        font-size $size-larger
+
+    +desktop()
+        font-primary()
+        regular()
+        upper()
+        font-size $size-smaller
+        font-style normal
+        letter-spacing 1px
+        color $c-secondary
+
 .copyright
     font-primary()
-    regular()
+    light()
+    max-width 27rem
+    margin auto
     font-size $size-super-tiny
+    text-align center
+
+    +tablet()
+        max-width 100%

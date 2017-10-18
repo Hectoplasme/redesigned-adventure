@@ -9,6 +9,15 @@
                 black()
                 font-size 7vw
 
+                +tablet()
+                    font-size $size-larger
+
+                +desktop()
+                    font-size $size-super-large
+
+            +tablet()
+                font-size $size-larger - 1rem
+
     p
         @extends .text
 
