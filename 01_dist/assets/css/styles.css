@@ -1455,6 +1455,10 @@ select,
 textarea {
   margin: 0;
 }
+button {
+  background: none;
+  border: 0;
+}
 button:focus,
 input:focus {
   outline: 0;
@@ -1509,19 +1513,22 @@ body {
 }
 .heading-1 {
   font-family: 'Playfair Display', serif;
+  letter-spacing: 0px;
   font-weight: 900;
-  font-size: 11rem;
+  font-size: 10.5rem;
 }
 .heading-2 {
   font-family: 'Playfair Display', serif;
+  letter-spacing: 0px;
   font-weight: 900;
-  font-size: 7.7rem;
+  font-size: 7.2rem;
 }
 .heading-3 {
   font-family: 'Playfair Display', serif;
+  letter-spacing: 0px;
   font-weight: 900;
   font-style: italic;
-  font-size: 6.6rem;
+  font-size: 6.1rem;
 }
 .teasing-1 {
   font-family: 'Poppins', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -1530,7 +1537,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   font-weight: 300;
-  font-size: 3.6rem;
+  font-size: 3.1rem;
 }
 .teasing-2 {
   font-family: 'Poppins', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -1551,15 +1558,26 @@ body {
 }
 .btn {
   font-family: 'Playfair Display', serif;
+  letter-spacing: 0px;
   font-weight: 900;
   font-style: italic;
-  font-size: 2.7rem;
+  font-size: 2.2rem;
   letter-spacing: 5px;
 }
 .logo {
   font-family: 'Playfair Display', serif;
+  letter-spacing: 0px;
   font-weight: 900;
-  font-size: 2.7rem;
+  font-size: 2.2rem;
+}
+.menu {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0px;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3.1rem;
+  letter-spacing: 5px;
+  line-height: 2;
 }
 .menu .is-active {
   font-weight: 700;
@@ -1599,6 +1617,71 @@ body {
   position: absolute;
   left: 3.2rem;
   bottom: 4rem;
+}
+.nav {
+  width: 100%;
+}
+.nav__toggler {
+  position: fixed;
+  z-index: 10;
+  top: 3.2rem;
+  right: 3.2rem;
+  width: 4rem;
+  height: 4rem;
+  text-indent: 9999px;
+  background: url("/assets/images/menu.png") no-repeat center center;
+  background-size: contain;
+}
+.nav__toggler:hover {
+  cursor: pointer;
+}
+.nav__inner {
+  position: absolute;
+  z-index: 11;
+  top: -100vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: top 86ms ease-out;
+  transition: top 86ms ease-out;
+}
+.nav__inner .header__logo {
+  position: absolute;
+  top: 3.2rem;
+  left: 3.2rem;
+}
+.nav__inner .nav__toggler {
+  position: absolute;
+  height: 5rem;
+  width: 2rem;
+  background: url("/assets/images/close.png") no-repeat center center;
+  background-size: contain;
+}
+.nav__inner .menu {
+  padding: 3.2rem 3.2rem 0;
+}
+.nav-open .nav__inner {
+  top: 0;
+  -webkit-transition: top 86ms ease-out;
+  transition: top 86ms ease-out;
+}
+.header {
+  position: absolute;
+  padding: 3.2rem;
+}
+.header__logo {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0px;
+  font-weight: 900;
+  width: 10rem;
+  font-size: 2.2rem;
+  line-height: 1.1;
 }
 .container {
   margin: 0 auto;
@@ -1650,6 +1733,7 @@ body {
 }
 .rte.banner__title h1 strong {
   font-family: 'Playfair Display', serif;
+  letter-spacing: 0px;
   font-weight: 900;
   font-size: 7vw;
 }

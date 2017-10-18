@@ -1,0 +1,47 @@
+.nav
+    width 100%
+
+    &__toggler
+        position fixed
+        z-index 10
+        top $gap
+        right $gap
+        width 4rem
+        height 4rem
+        text-indent 9999px
+        background url(/assets/images/menu.png) no-repeat center center
+        background-size contain
+
+        &:hover
+            cursor pointer
+
+    &__inner
+        position absolute
+        z-index 11
+        top -100vh
+        left 0
+        width 100vw
+        height 100vh
+        display flex
+        align-items center
+        transition top $speed $easing
+
+        .header__logo
+            position absolute
+            top $gap
+            left $gap
+
+        .nav__toggler
+            position absolute
+            height 5rem
+            width 2rem
+            background url(/assets/images/close.png) no-repeat center center
+            background-size contain
+
+        .menu
+            padding $gap $gap 0
+
+    &-open
+        .nav__inner
+            top 0
+            transition top $speed $easing
