@@ -10,7 +10,7 @@
       <ul class="menu">
           <?php $links = get_field('contact_links');
           foreach($links as $link_item): ?>
-                    <li><a href="<?php echo $link_item['link']['url']; ?>"><?php echo $link_item['link']['title']; ?></a></li>
+                    <li><a href="<?php echo $link_item['link']['url']; ?>" target="_blank"><?php echo $link_item['link']['title']; ?></a></li>
       <?php endforeach; ?>
       </ul>
       <p class="footer__bottom u-c-grey-dark copyright">©2017 Laurianne Terrier, All Rights Reserved | <a href="#">Mentions légales</a></p>

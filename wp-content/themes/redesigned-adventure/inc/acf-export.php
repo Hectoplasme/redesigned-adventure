@@ -1,6 +1,47 @@
 <?php if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array (
+	'key' => 'group_59e8fbea1b9db',
+	'title' => 'Lien du projet',
+	'fields' => array (
+		array (
+			'key' => 'field_59e8fbfb15d79',
+			'label' => 'Url du lien',
+			'name' => 'project_url',
+			'type' => 'url',
+			'value' => NULL,
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+	),
+	'location' => array (
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => 1,
+	'description' => '',
+));
+
+acf_add_local_field_group(array (
 	'key' => 'group_59e8c54cb8ed7',
 	'title' => 'Section « Présentation »',
 	'fields' => array (

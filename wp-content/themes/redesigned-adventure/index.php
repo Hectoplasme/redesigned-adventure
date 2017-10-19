@@ -9,7 +9,32 @@
       </div>
     </div>
   </section>
-  <section class="section project section--dark" id="projets">
+  <?php
+  $projects = get_posts(
+      array(
+          'posts_per_page'    => 4,
+          'orderby' => 'menu_order',
+          'order' => 'ASC'
+      )
+  );
+
+  if( $projects ):
+      foreach ($projects as $i => $project):
+          $post = $project;
+          setup_postdata($post);
+          if ($i === 0): ?>
+            <section class="section project section--dark" id="projets">
+          <?php elseif ($i%2 === 0) : ?>
+            <section class="section project section--dark">
+          <?php  else :?>
+            <section class="section project">
+          <?php endif;?>
+          <?php get_template_part('partials/project-item'); ?>
+            </section>
+          <?php wp_reset_postdata();
+      endforeach;
+  endif; ?>
+  <!-- <section class="section project section--dark" id="projets">
     <div class="container project__inner">
       <h2 class="project__title heading-2">Luditales</h2>
       <p class="project__subtitle teasing-2">Identité graphique & développement</p>
@@ -30,7 +55,7 @@
       </article>
       <a href="" rel="external" class="btn">Voir le projet</a>
     </div>
-  </section>
+  </section> -->
   <section class="section u-b-grey" id="a-propos">
     <div class="container">
       <h2 class="section__title heading-1"><?php the_field('about_title', false, false);?></h2>
