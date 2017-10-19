@@ -1736,12 +1736,14 @@ body {
   background: repeating-linear-gradient(180deg, transparent -1%, transparent 60%, #5ee6a8 60%, #5ee6a8 100%);
 }
 .btn:hover {
+  cursor: pointer;
   background: repeating-linear-gradient(180deg, transparent -1%, transparent 0rem, #5ee6a8 0rem, #5ee6a8 100%);
 }
 .section--dark .btn {
   background: repeating-linear-gradient(180deg, transparent -1%, transparent 60%, #4a3c4e 60%, #4a3c4e 100%);
 }
 .section--dark .btn:hover {
+  cursor: pointer;
   background: repeating-linear-gradient(180deg, transparent, transparent 0rem, #4a3c4e 0rem, #4a3c4e 98%);
 }
 .link,

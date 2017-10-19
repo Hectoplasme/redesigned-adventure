@@ -33,6 +33,15 @@ const pouetModule = (($, pouet) => {
         $('html,body').stop().animate({ scrollTop:offsetY || 0 }, speed || 240);
     };
 
+    utils.goTos = () => {
+        $('.gotos').on('click',(e) => {
+            let dir = e.target.href.split('#')[1];
+            let offsetY = document.querySelector('#' + dir) ? document.querySelector('#' + dir).offsetTop : 0;
+            e.preventDefault();
+            pouet.utils.goTo(offsetY);
+        });
+    };
+
     //pouet.utils.externalLinks
     utils.externalLinks = (target) => {
         $body.on('click', 'a[rel="external"]', (e) => {

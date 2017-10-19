@@ -65,6 +65,7 @@ const navToggler = require('./modules/nav-toggler.js');
 
                 initModules() {
                     pouet.utils.externalLinks();
+                    pouet.utils.goTos();
                 },
 
                 initVariables() {
