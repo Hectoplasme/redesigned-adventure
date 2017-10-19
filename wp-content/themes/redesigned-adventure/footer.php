@@ -1,17 +1,17 @@
 <footer class="footer u-b-black section section--dark" id="contact">
   <div class="container footer__inner">
-    <h2 class="section__title heading-1">Contact</h2>
+    <h2 class="section__title heading-1"><?php the_field('contact_title', false, false);?></h2>
     <div class="row">
       <div class="column is-one-third-desktop">
-        <p class="section__teasing teasing-1">Intéréssé.e ? N’hésitez pas à m’envoyer un petit mot ou retrouvez moi sur les réseaux sociaux.</p>
+        <p class="section__teasing teasing-1"><?php the_field('contact_text', false, false);?></p>
       </div>
     </div>
     <nav class="footer__nav">
       <ul class="menu">
-        <li><a href="#">Mail</a></li>
-        <li><a href="#">Linkedin</a></li>
-        <li><a href="#">Github</a></li>
-        <li><a href="#">Tumblr</a></li>
+          <?php $links = get_field('contact_links');
+          foreach($links as $link_item): ?>
+                    <li><a href="<?php echo $link_item['link']['url']; ?>"><?php echo $link_item['link']['title']; ?></a></li>
+      <?php endforeach; ?>
       </ul>
       <p class="footer__bottom u-c-grey-dark copyright">©2017 Laurianne Terrier, All Rights Reserved | <a href="#">Mentions légales</a></p>
     </nav>

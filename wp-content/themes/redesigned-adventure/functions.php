@@ -38,18 +38,6 @@ function pouet_scripts() {
  	remove_action('wp_head', '_admin_bar_bump_cb');
  }
 
-/***
-* add options page
-**/
-if( function_exists('acf_add_options_page') ) {
-    acf_add_options_page(array(
-    	'page_title' 	=> 'Paramètres du thème Redesignes Adventure',
-    	'menu_title'	=> 'Redesigned Adventure Theme',
-    	'menu_slug' 	=> 'theme-general-settings',
-    	'capability'	=> 'manage_options',
-    	'redirect'		=> false
-     ));
-}
 
 /***
 * Wysiwyg editor options
@@ -79,5 +67,19 @@ function tinymce_paste_as_text( $init ) {
     return $init;
 }
 add_filter('tiny_mce_before_init', 'tinymce_paste_as_text');
+
+add_action('admin_head', 'admin_styles');
+function admin_styles() {
+
+	?>
+	<style>
+		.acf-editor-wrap iframe {
+			height: 200px !important;
+			min-height: 200px;
+		}
+	</style>
+	<?php
+
+}
 
 ?>
