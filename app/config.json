@@ -8,7 +8,7 @@
         "fonts": "fonts/",
         "assets": "assets/",
         "src": "00_src/",
-        "dist": "01_dist/",
+        "dist": "../wp-content/themes/redesigned-adventure/static/",
         "tasks": "02_tasks/"
     }
 }
