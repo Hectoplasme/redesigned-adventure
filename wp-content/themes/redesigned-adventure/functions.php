@@ -37,4 +37,47 @@ function pouet_scripts() {
  function remove_admin_login_header() {
  	remove_action('wp_head', '_admin_bar_bump_cb');
  }
+
+/***
+* add options page
+**/
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page(array(
+    	'page_title' 	=> 'Paramètres du thème Redesignes Adventure',
+    	'menu_title'	=> 'Redesigned Adventure Theme',
+    	'menu_slug' 	=> 'theme-general-settings',
+    	'capability'	=> 'manage_options',
+    	'redirect'		=> false
+     ));
+}
+
+/***
+* Wysiwyg editor options
+**/
+
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
+function my_toolbars( $toolbars )
+{
+	// Add a new toolbar called "Only Bold"
+	$toolbars['Only Bold' ] = array();
+	$toolbars['Only Bold' ][1] = array('bold' );
+
+    	// Add a new toolbar called "Very Simple"
+	$toolbars['Very Simple' ] = array();
+	$toolbars['Very Simple' ][1] = array('bold', 'link' );
+
+	// return $toolbars - IMPORTANT!
+	return $toolbars;
+}
+
+function tinymce_paste_as_text( $init ) {
+    $init['paste_as_text'] = true;
+
+    // omit the pastetext button so that the user can't change it manually, current toolbar2 content as of 4.1.1 is "formatselect,underline,alignjustify,forecolor,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help"
+    $init["toolbar2"] = "formatselect,underline,alignjustify,forecolor,removeformat,charmap,outdent,indent,undo,redo,wp_help";
+
+    return $init;
+}
+add_filter('tiny_mce_before_init', 'tinymce_paste_as_text');
+
 ?>
