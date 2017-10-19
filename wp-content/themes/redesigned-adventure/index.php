@@ -5,7 +5,7 @@
     <div class="banner__bg u-b-pattern"></div>
     <div class="container banner__inner">
       <div class="banner__title rte">
-        <h1><strong>Développeuse</strong> web <br> <strong>Illustratrice</strong> onirique <br> <strong>Exploratrice</strong> imaginaire</h1>
+        <h1><?php the_field('baseline', 'option', false, false);?></h1>
       </div>
     </div>
   </section>
