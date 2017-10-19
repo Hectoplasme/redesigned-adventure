@@ -34,7 +34,8 @@ const pouetModule = (($, pouet) => {
     };
 
     utils.goTos = () => {
-        $('.gotos').on('click',(e) => {
+        $('a[href^="#"]').on('click',(e) => {
+            console.log('pouet');
             let dir = e.target.href.split('#')[1];
             let offsetY = document.querySelector('#' + dir) ? document.querySelector('#' + dir).offsetTop : 0;
             e.preventDefault();

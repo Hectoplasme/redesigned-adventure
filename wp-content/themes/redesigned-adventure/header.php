@@ -10,19 +10,25 @@
 
 <body <?php body_class(); ?>>
   <header class="header">
-    <h1 class="header__logo u-c-secondary"><a href="#">Laurianne Terrier</a></h1>
+    <h1 class="header__logo u-c-secondary">
+        <?php if (is_front_page()) : ?>
+        <a href="#accueil"><?php bloginfo('name'); ?></a>
+        <?php else: ?>
+        <a href="<?php echo esc_url( home_url( '/' ) );?>"><?php bloginfo('name'); ?></a>
+        <?php endif; ?>
+    </h1>
     <div class="header__nav nav js-nav">
       <button class="nav__toggler js-nav-open">Menu</button>
       <nav class="nav__inner u-b-pattern">
         <div class="nav__header">
           <button class="nav__toggler js-nav-close">Menu</button>
         </div>
-        <ul class="menu">
-          <li class="is-active"><a class="gotos" href="#accueil">Accueil</a></li>
-          <li><a class="gotos" href="#projets">Projets</a></li>
-          <li><a class="gotos" href="#a-propos">A propos</a></li>
-          <li><a class="gotos" href="#contact">Contact</a></li>
-        </ul>
+        <?php wp_nav_menu( array(
+						'theme_location' => 'header-menu',
+						'container' => false,
+						'depth' => 1
+				) ); ?>
+        
       </nav>
     </div>
   </header>
