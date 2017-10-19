@@ -1,1 +1,0 @@
-{"version":3,"sources":["test.styl","test.css"],"names":[],"mappings":"AAAA;EACI,YAAA;CCCH","file":"../test.css","sourcesContent":["h1\r\n    color red\r\n","h1 {\n  color: #f00;\n}\n"]}
