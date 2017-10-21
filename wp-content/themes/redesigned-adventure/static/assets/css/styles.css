@@ -2065,6 +2065,7 @@ body {
 @media all and (min-width: 60.4em) {
   .header__logo {
     position: absolute;
+    z-index: 11;
     top: 3.2rem;
     left: 3.2rem;
   }
