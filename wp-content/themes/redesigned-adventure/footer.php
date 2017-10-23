@@ -9,9 +9,11 @@
     <nav class="footer__nav">
       <ul class="menu">
           <?php $links = get_field('contact_links');
-          foreach($links as $link_item): ?>
-                    <li><a href="<?php echo $link_item['link']['url']; ?>" target="_blank"><?php echo $link_item['link']['title']; ?></a></li>
-      <?php endforeach; ?>
+          if ($links) :
+              foreach($links as $link_item): ?>
+                        <li><a href="<?php echo $link_item['link']['url']; ?>" target="_blank"><?php echo $link_item['link']['title']; ?></a></li>
+          <?php endforeach;
+            endif;?>
       </ul>
       <p class="footer__bottom u-c-grey-dark copyright">©2017 Laurianne Terrier, All Rights Reserved | <a href="#">Mentions légales</a></p>
     </nav>
